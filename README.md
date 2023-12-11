@@ -11,8 +11,7 @@
         - [EDA Section](#eda-section)
         - [Prediction Section](#prediction-section)
         - [User Interface](#user-interface)
-4. [Screenshots](#screenshots)
-5. [Additional Details](#additional-details)
+4. [Additional Details](#additional-details)
 
 `<a name="objective"></a>`
 ## Objective
@@ -80,12 +79,6 @@ In the "Prediction" section, users can input relevant flight details to obtain p
 d. User Interface
 Enjoy a simple and user-friendly interface designed for easy navigation and interaction. The interface is intuitive, ensuring that users can seamlessly explore the dataset, analyze insights, and make price predictions effortlessly.
 
-<a name="screenshots"></a>
-
-Screenshots
-[Include screenshots here to showcase the different sections and the user interface of the application.]
-
-Note: Screenshots can be added later to visually represent the application's appearance and functionality.
 
 <a name="additional-details"></a>
 
@@ -94,4 +87,4 @@ By following these steps, users can gain a comprehensive understanding of flight
 
 For additional details, refer to the attached project report for a more in-depth analysis of the methodologies and findings employed in this data analytics project.
 
-csharp
+
