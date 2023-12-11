@@ -1,4 +1,3 @@
-
 Flight Price EDA and Prediction Application
 Table of Contents
 Objective
@@ -12,6 +11,7 @@ EDA Section
 Prediction Section
 User Interface
 Screenshots
+Project Report
 <a name="objective"></a>
 
 Objective
@@ -86,6 +86,12 @@ Screenshots
 
 Note: Screenshots can be added later to visually represent the application's appearance and functionality.
 
-By following these steps, users can gain a comprehensive understanding of flight prices through our EDA and prediction application. The combination of data exploration, visualization, and machine learning enhances the user experience, making it an informative tool for those interested in the dynamics of flight pricing.
+<a name="project-report"></a>
 
+Project Report
 For additional details, refer to the attached project report for a more in-depth analysis of the methodologies and findings employed in this data analytics project.
+
+
+
+
+
