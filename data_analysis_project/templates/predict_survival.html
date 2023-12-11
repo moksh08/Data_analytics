@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Predict Flight Price</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'predict_flight_price' %}" target="_blank">Predict Flight Price</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Welcome to Your Flight Price Prediction</h2>
+        <p>Enter the details below to get an estimated flight price. Make it interesting by providing accurate information!</p>
+
+        <form method="post" action="{% url 'predict_flight_price' %}" class="mt-4">
+            {% csrf_token %}
+
+            <!-- Bootstrap Input Form Group for Duration with Tooltip -->
+            <div class="form-group">
+                <label for="duration" data-toggle="tooltip" data-placement="top" title="Enter the flight duration in hours">Flight Duration:</label>
+                <input type="number" class="form-control" id="duration" name="duration" required>
+            </div>
+
+            <!-- Bootstrap Input Form Group for Days Left with Tooltip -->
+            <div class="form-group">
+                <label for="days_left" data-toggle="tooltip" data-placement="top" title="Enter the number of days left until the flight">Days Left:</label>
+                <input type="number" class="form-control" id="days_left" name="days_left" required>
+            </div>
+
+            <!-- Bootstrap Input Form Group for Time of Day with Tooltip -->
+            <div class="form-group">
+                <label for="time_of_day" data-toggle="tooltip" data-placement="top" title="Enter the time of day in 24-hour format (e.g., 1400 for 2:00 PM)">Time of Day:</label>
+                <input type="number" class="form-control" id="time_of_day" name="time_of_day" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+        <!-- Display Prediction Result -->
+        {% if prediction is not None %}
+            <div class="mt-4">
+                <h3>Prediction Result:</h3>
+                <p>The flight price is predicted to be ${{ prediction }}.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Add Bootstrap Tooltip Script -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+</html>
